@@ -1,4 +1,4 @@
-package workWithArray;
+package by.course.lab.task1.arrays.util;
 
 public class SortArray {
 

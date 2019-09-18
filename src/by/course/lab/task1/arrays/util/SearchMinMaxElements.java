@@ -1,8 +1,8 @@
-package workWithArray;
+package by.course.lab.task1.arrays.util;
 
 public class SearchMinMaxElements {
 
-    public static int searchMaxElement(int[] arr) {
+    public static int maxElement(int[] arr) {
         int size = arr.length;
         int maxElement = arr[0];
 
@@ -15,7 +15,7 @@ public class SearchMinMaxElements {
         return maxElement;
     }
 
-    public static int searchMinElement(int[] arr) {
+    public static int minElement(int[] arr) {
         int size = arr.length;
         int minElement = arr[0];
 

@@ -1,10 +1,10 @@
-package creationArray;
+package by.course.lab.task1.arrays.creation;
 
 import java.util.Random;
 
-public class CreationArray {
+public class ArraysCreator {
 
-    public static int[] randomCrete(int size) {
+    public static int[] createRandomArray(int size) {
         Random random = new Random();
 
         int[] arr = new int[size];

@@ -1,8 +1,8 @@
-package workWithArray;
+package by.course.lab.task1.arrays.util;
 
 public class ReplacementWithCondition {
 
-    public static int[] replacementElementsLessThen(int element, int[] arr) {
+    public static int[] replacementElementsLessThan(int element, int[] arr) {
         int size = arr.length;
 
         for (int i = 0; i < size; i++) {

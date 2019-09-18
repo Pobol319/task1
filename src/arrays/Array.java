@@ -7,60 +7,23 @@ public class Array {
 
     public static void main(String[] args) {
 
-        int size = 5;
-
+        int size = 10;
         int[] array = CreateArray.randomCrete(size);
-        SortArray.bubbleSort(array);
 
-        System.out.println(Arrays.toString(array));
+        /* Сортировка */
+        System.out.println(Arrays.toString(SortArray.bubbleSort(array)));
 
+        /* Поиск мин и макс значения */
+        System.out.println("Мин. элемент: " + SearchMinMaxElements.searchMinElement(array));
+        System.out.println("Макс. элемент: " + SearchMinMaxElements.searchMaxElement(array));
 
-        /*
-        int a1 = 5;
-        int a2 = 5;
-        int num[][] = new int[a1][a2];
-        Random random = new Random();
+        /* Поиск суммы и среднего значения */
+        System.out.println("AVG: " + AvgSumElementsOfArray.avgElementsArray(array));
+        System.out.println("Sum: " + AvgSumElementsOfArray.sumElementsArray(array));
 
+        /* Замена элементов по условию*/
+        System.out.println(Arrays.toString(ReplacementWithCondition.replacementElementsLessThen(50, array)));
 
-        for (int i = 0; i < a1; i++) {
-            for (int j = 0; j < a2; j++) {
-                num[i][j] = random.nextInt(50);
-            }
-        }
-
-
-        for (int i = 0; i < a1; i++) {
-            for (int j = 0; j < a2; j++) {
-                System.out.print(num[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-
-        System.out.println(" ");
-
-        int c = num.length;
-        for (int j = 0; j < c; j++) {
-            int i = 1;
-            while (i < c) {
-                if (i == 0 || num[i - 1][j] <= num[i][j]) {
-                    i++;
-                } else {
-                    int b = num[i][j];
-                    num[i][j] = num[i - 1][j];
-                    num[i - 1][j] = b;
-                    i--;
-                }
-
-            }
-        }
-        for (int i = 0; i < a1; i++) {
-            for (int j = 0; j < a2; j++) {
-                System.out.print(num[i][j] + " ");
-            }
-            System.out.println();
-        }
-        */
 
     }
 

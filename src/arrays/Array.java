@@ -1,9 +1,21 @@
+package arrays;
+
+import java.util.Arrays;
 import java.util.Random;
 
 public class Array {
 
     public static void main(String[] args) {
 
+        int size = 5;
+
+        int[] array = CreateArray.randomCrete(size);
+        SortArray.bubbleSort(array);
+
+        System.out.println(Arrays.toString(array));
+
+
+        /*
         int a1 = 5;
         int a2 = 5;
         int num[][] = new int[a1][a2];
@@ -48,6 +60,7 @@ public class Array {
             }
             System.out.println();
         }
+        */
 
     }
 

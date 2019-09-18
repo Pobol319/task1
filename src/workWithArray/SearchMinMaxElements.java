@@ -1,4 +1,4 @@
-package arrays;
+package workWithArray;
 
 public class SearchMinMaxElements {
 

@@ -1,8 +1,8 @@
-package arrays;
+package creationArray;
 
 import java.util.Random;
 
-public class CreateArray {
+public class CreationArray {
 
     public static int[] randomCrete(int size) {
         Random random = new Random();

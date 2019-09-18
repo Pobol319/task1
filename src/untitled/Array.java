@@ -1,14 +1,19 @@
-package arrays;
+package untitled;
+
+import creationArray.CreationArray;
+import workWithArray.AvgSumElementsOfArray;
+import workWithArray.ReplacementWithCondition;
+import workWithArray.SearchMinMaxElements;
+import workWithArray.SortArray;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class Array {
 
     public static void main(String[] args) {
 
         int size = 10;
-        int[] array = CreateArray.randomCrete(size);
+        int[] array = CreationArray.randomCrete(size);
 
         /* Сортировка */
         System.out.println(Arrays.toString(SortArray.bubbleSort(array)));

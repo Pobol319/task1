@@ -2,25 +2,25 @@ package by.course.task1.arrays.sorter;
 
 public class SortArray {
 
-    public static int[] bubbleSort(int[] arr) {
+    public static int[] bubbleSort(int[] array) {
 
-        int size = arr.length;
+        int size = array.length;
         int element;
 
         for (int i = 0; i < size; ) {
-            if (i == 0 || arr[i - 1] <= arr[i]) {
+            if (i == 0 || array[i - 1] <= array[i]) {
                 i++;
             } else {
-                element = arr[i];
-                arr[i] = arr[i - 1];
-                arr[i - 1] = element;
+                element = array[i];
+                array[i] = array[i - 1];
+                array[i - 1] = element;
 
                 i--;
 
             }
         }
 
-        return arr;
+        return array;
     }
 
 

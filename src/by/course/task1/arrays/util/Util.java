@@ -2,44 +2,44 @@ package by.course.task1.arrays.util;
 
 public class Util {
 
-    public static double elementsAverage(int[] arr) {
-        int size = arr.length;
+    public static double elementsAverage(int[] array) {
+        int size = array.length;
         double avg = 0;
 
-        for (int element : arr) {
+        for (int element : array) {
             avg = avg + element;
         }
 
         return avg / size;
     }
 
-    public static int elementsSum(int[] arr) {
+    public static int elementsSum(int[] array) {
         int sum = 0;
 
-        for (int element : arr) {
+        for (int element : array) {
             sum = sum + element;
         }
 
         return sum;
     }
 
-    public static int[] replacementElementsLessThan(int element, int[] arr) {
-        int size = arr.length;
+    public static int[] replacementElementsLessThan(int element, int[] array) {
+        int size = array.length;
 
         for (int i = 0; i < size; i++) {
-            if (arr[i] < element) {
-                arr[i] = element;
+            if (array[i] < element) {
+                array[i] = element;
             }
         }
 
-        return arr;
+        return array;
     }
 
-    public static int maxElement(int[] arr) {
-        int size = arr.length;
-        int maxElement = arr[0];
+    public static int maxElement(int[] array) {
+        int size = array.length;
+        int maxElement = array[0];
 
-        for (int element : arr) {
+        for (int element : array) {
             if (maxElement < element) {
                 maxElement = element;
             }
@@ -48,11 +48,11 @@ public class Util {
         return maxElement;
     }
 
-    public static int minElement(int[] arr) {
-        int size = arr.length;
-        int minElement = arr[0];
+    public static int minElement(int[] array) {
+        int size = array.length;
+        int minElement = array[0];
 
-        for (int element : arr) {
+        for (int element : array) {
             if (minElement > element) {
                 minElement = element;
             }

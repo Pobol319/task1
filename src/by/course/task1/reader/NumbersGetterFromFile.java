@@ -1,7 +1,7 @@
-package by.course.task1.streams.file_handler;
+package by.course.task1.reader;
 
 import by.course.task1.streams.conventer.ConverterFromStringToArray;
-import by.course.task1.streams.validation.Validator;
+import by.course.task1.validation.Validator;
 
 import java.io.*;
 import java.util.ArrayList;

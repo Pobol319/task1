@@ -1,4 +1,4 @@
-package by.course.task1.arrays.util;
+package by.course.task1.util;
 
 public class Util {
 

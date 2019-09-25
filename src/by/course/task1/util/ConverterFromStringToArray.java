@@ -1,4 +1,4 @@
-package by.course.task1.streams.conventer;
+package by.course.task1.util;
 
 import java.io.IOException;
 import java.util.ArrayList;

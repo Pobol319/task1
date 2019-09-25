@@ -1,4 +1,4 @@
-package by.course.task1.arrays.creator;
+package by.course.task1.creator;
 
 import java.util.Random;
 

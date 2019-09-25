@@ -1,4 +1,4 @@
-package by.course.task1.streams.validation;
+package by.course.task1.validation;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

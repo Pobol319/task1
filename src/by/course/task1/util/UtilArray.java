@@ -9,7 +9,6 @@ public class UtilArray {
         for (int element : array) {
             avg = avg + element;
         }
-
         return avg / size;
     }
 
@@ -19,24 +18,21 @@ public class UtilArray {
         for (int element : array) {
             sum = sum + element;
         }
-
         return sum;
     }
 
     public static int[] replacementElementsLessThan(int element, int[] array) {
-        int size = array.length;
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] < element) {
                 array[i] = element;
             }
         }
-
         return array;
     }
 
     public static int maxElement(int[] array) {
-        int size = array.length;
+
         int maxElement = array[0];
 
         for (int element : array) {
@@ -44,7 +40,6 @@ public class UtilArray {
                 maxElement = element;
             }
         }
-
         return maxElement;
     }
 
@@ -57,7 +52,6 @@ public class UtilArray {
                 minElement = element;
             }
         }
-
         return minElement;
     }
 

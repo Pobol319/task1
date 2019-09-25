@@ -1,6 +1,9 @@
-package by.course.task1.read;
+package by.course.task1.parser;
 
-import javax.xml.validation.Validator;
+import by.course.task1.util.ConverterFromStringToArray;
+import by.course.task1.validation.Validator;
+
+
 import java.io.*;
 import java.util.ArrayList;
 

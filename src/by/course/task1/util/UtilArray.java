@@ -1,6 +1,6 @@
 package by.course.task1.util;
 
-public class Util {
+public class UtilArray {
 
     public static double elementsAverage(int[] array) {
         int size = array.length;

@@ -1,8 +1,6 @@
-package by.course.task1.reader;
+package by.course.task1.read;
 
-import by.course.task1.streams.conventer.ConverterFromStringToArray;
-import by.course.task1.validation.Validator;
-
+import javax.xml.validation.Validator;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -21,7 +19,6 @@ public class NumbersGetterFromFile {
 
             while ((temp = bufferedReader.readLine()) != null) {
                 if (Validator.isValid(temp)) {
-
                     listOfArrays.add(ConverterFromStringToArray.getDoubleArray(temp));
 
                 }

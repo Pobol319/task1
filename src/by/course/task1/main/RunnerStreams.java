@@ -1,8 +1,5 @@
 package by.course.task1.main;
 
-
-import by.course.task1.reader.NumbersGetterFromFile;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;

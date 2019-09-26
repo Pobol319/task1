@@ -10,7 +10,6 @@ public class RunnerStreams {
 
     public static void main(String[] args) throws IOException {
 
-
         File file = new File("resources\\numbers.txt");
 
         NumbersGetterFromFile numbersGetterFromFile = new NumbersGetterFromFile();

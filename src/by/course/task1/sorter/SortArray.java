@@ -1,5 +1,7 @@
 package by.course.task1.sorter;
 
+import java.util.stream.IntStream;
+
 public class SortArray {
 
     public static int[] bubbleSort(int[] array) {
@@ -55,6 +57,9 @@ public class SortArray {
         return array;
     }
 
+    public static int[] sortByIntStream(int[] array) {
+        return IntStream.of(array).sorted().toArray();
+    }
 
     public static double[] bubbleSort(double[] array) {
 

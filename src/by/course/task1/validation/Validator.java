@@ -18,7 +18,6 @@ public class Validator {
                 return false;
             }
         }
-
         return true;
     }
 

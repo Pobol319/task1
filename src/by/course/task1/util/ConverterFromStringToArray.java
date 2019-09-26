@@ -13,7 +13,6 @@ public class ConverterFromStringToArray {
         for (int i = 0; i < arrayOfStringNumbers.length; i++) {
             arrayOfDoubleNumbers[i] = Double.parseDouble(arrayOfStringNumbers[i]);
         }
-
         return arrayOfDoubleNumbers;
     }
 

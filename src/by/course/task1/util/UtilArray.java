@@ -1,5 +1,8 @@
 package by.course.task1.util;
 
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+
 public class UtilArray {
 
     public static double elementsAverage(int[] array) {
@@ -12,6 +15,10 @@ public class UtilArray {
         return avg / size;
     }
 
+    public static double elementsAverageByIntStream(int[] array) {
+        return IntStream.of(array).average().getAsDouble();
+    }
+
     public static int elementsSum(int[] array) {
         int sum = 0;
 
@@ -19,6 +26,10 @@ public class UtilArray {
             sum = sum + element;
         }
         return sum;
+    }
+
+    public static int elementsSumByIntStream(int[] array) {
+        return IntStream.of(array).sum();
     }
 
     public static int[] replacementElementsLessThan(int element, int[] array) {
@@ -29,6 +40,10 @@ public class UtilArray {
             }
         }
         return array;
+    }
+
+    public static boolean containElement(int[] array, int element) {
+        return IntStream.of(array).anyMatch(i -> i == element);
     }
 
     public static int maxElement(int[] array) {
@@ -43,8 +58,11 @@ public class UtilArray {
         return maxElement;
     }
 
+    public static int maxElementByIntStream(int[] array) {
+        return IntStream.of(array).max().getAsInt();
+    }
+
     public static int minElement(int[] array) {
-        int size = array.length;
         int minElement = array[0];
 
         for (int element : array) {
@@ -53,6 +71,10 @@ public class UtilArray {
             }
         }
         return minElement;
+    }
+
+    public static int minElementByIntStream(int[] array) {
+        return IntStream.of(array).min().getAsInt();
     }
 
 }

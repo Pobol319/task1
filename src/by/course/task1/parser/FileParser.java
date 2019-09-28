@@ -18,11 +18,11 @@ public class FileParser {
             while ((temp = bufferedReader.readLine()) != null) {
                 textFromFile.add(temp);
             }
-            if (textFromFile.isEmpty()) throw new StreamsException("В файле нет записей", file.getName());
+            if (textFromFile.isEmpty()) throw new StreamsException("File is empty", file.getName());
         } catch (FileNotFoundException e1) {
-            System.err.println("Файл не найден");
+            System.err.println("File not found");
         } catch (IOException e2) {
-            System.err.println("Ошибка чтения из файла");
+            System.err.println("Error while reading from file");
         } catch (StreamsException e3){
             System.err.println(e3.getMessage());
             System.err.println(e3.getText());

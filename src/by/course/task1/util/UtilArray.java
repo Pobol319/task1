@@ -1,6 +1,5 @@
 package by.course.task1.util;
 
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 public class UtilArray {
@@ -15,6 +14,16 @@ public class UtilArray {
         return avg / size;
     }
 
+    public static double elementsAverage(double[] array) {
+        int size = array.length;
+        double avg = 0;
+
+        for (double element : array) {
+            avg = avg + element;
+        }
+        return avg / size;
+    }
+
     public static double elementsAverageByIntStream(int[] array) {
         return IntStream.of(array).average().getAsDouble();
     }
@@ -23,6 +32,15 @@ public class UtilArray {
         int sum = 0;
 
         for (int element : array) {
+            sum = sum + element;
+        }
+        return sum;
+    }
+
+    public static double elementsSum(double[] array) {
+        double sum = 0;
+
+        for (double element : array) {
             sum = sum + element;
         }
         return sum;
@@ -42,15 +60,23 @@ public class UtilArray {
         return array;
     }
 
-    public static boolean containElement(int[] array, int element) {
-        return IntStream.of(array).anyMatch(i -> i == element);
-    }
-
     public static int maxElement(int[] array) {
 
         int maxElement = array[0];
 
         for (int element : array) {
+            if (maxElement < element) {
+                maxElement = element;
+            }
+        }
+        return maxElement;
+    }
+
+    public static double maxElement(double[] array) {
+
+        double maxElement = array[0];
+
+        for (double element : array) {
             if (maxElement < element) {
                 maxElement = element;
             }
@@ -66,6 +92,17 @@ public class UtilArray {
         int minElement = array[0];
 
         for (int element : array) {
+            if (minElement > element) {
+                minElement = element;
+            }
+        }
+        return minElement;
+    }
+
+    public static double minElement(double[] array) {
+        double minElement = array[0];
+
+        for (double element : array) {
             if (minElement > element) {
                 minElement = element;
             }

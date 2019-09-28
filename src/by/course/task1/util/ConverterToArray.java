@@ -1,11 +1,11 @@
 package by.course.task1.util;
 
 
+import java.util.stream.IntStream;
 
-public class ConverterFromStringToArray {
+public class ConverterToArray {
 
-
-    public static double[] getDoubleArray(String temp)  {
+    public static double[] getDoubleArray(String temp) {
 
         String[] arrayOfStringNumbers = temp.split("[ ]+");
         double[] arrayOfDoubleNumbers = new double[arrayOfStringNumbers.length];
@@ -14,6 +14,10 @@ public class ConverterFromStringToArray {
             arrayOfDoubleNumbers[i] = Double.parseDouble(arrayOfStringNumbers[i]);
         }
         return arrayOfDoubleNumbers;
+    }
+
+    public static int[] getIntArrayFromIntStream(IntStream intStream) {
+        return intStream.toArray();
     }
 
 

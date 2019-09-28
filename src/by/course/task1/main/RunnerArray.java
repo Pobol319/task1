@@ -1,9 +1,8 @@
 package by.course.task1.main;
 
 import by.course.task1.creator.ArraysCreator;
-import by.course.task1.sorter.SortArray;
+import by.course.task1.sorter.ArraysSorter;
 import by.course.task1.util.UtilArray;
-import jdk.jshell.execution.Util;
 
 import java.util.Arrays;
 
@@ -13,17 +12,15 @@ public class RunnerArray {
 
         int size = 10;
         int[] array = ArraysCreator.createRandomArray(size);
-        int[] array2 = ArraysCreator.createRandomArray(size);
-        int[] array3 = ArraysCreator.createRandomArray(size);
 
         /* Сортировка */
-        System.out.println(Arrays.toString(SortArray.bubbleSort(array)));
-        System.out.println(Arrays.toString(SortArray.insertionSort(array2)));
-        System.out.println(Arrays.toString(SortArray.selectionSort(array3)));
+        System.out.println(Arrays.toString(ArraysSorter.bubbleSort(array)));
+        System.out.println(Arrays.toString(ArraysSorter.insertionSort(array)));
+        System.out.println(Arrays.toString(ArraysSorter.selectionSort(array)));
 
         /* Поиск мин и макс значения */
-        System.out.println("Мин. элемент: " + UtilArray.minElement(array));
-        System.out.println("Макс. элемент: " + UtilArray.maxElement(array));
+        System.out.println("Min element: " + UtilArray.minElement(array));
+        System.out.println("Max element: " + UtilArray.maxElement(array));
 
         /* Поиск суммы и среднего значения */
         System.out.println("AVG: " + UtilArray.elementsAverage(array));

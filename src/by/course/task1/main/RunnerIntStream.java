@@ -1,7 +1,8 @@
 package by.course.task1.main;
 
 import by.course.task1.creator.ArraysCreator;
-import by.course.task1.sorter.SortArray;
+import by.course.task1.sorter.ArraysSorter;
+import by.course.task1.util.ConverterToArray;
 import by.course.task1.util.UtilArray;
 
 
@@ -13,12 +14,13 @@ public class RunnerIntStream {
 
         int size = 10;
 
-        int[] array = ArraysCreator.createRandomArrayByIntStream(size);
+        IntStream intStream = ArraysCreator.createRandomIntStream(size);
+        int[] array = ConverterToArray.getIntArrayFromIntStream(intStream);
 
         System.out.println(Arrays.toString(array));
 
         /* Сортировка */
-        System.out.println(Arrays.toString(SortArray.sortByIntStream(array)));
+        System.out.println(Arrays.toString(ArraysSorter.sortByIntStream(array)));
 
         /*Поиск min*/
         System.out.println(UtilArray.minElementByIntStream(array));
@@ -31,10 +33,6 @@ public class RunnerIntStream {
 
         /*Поиск суммы*/
         System.out.println(UtilArray.elementsSumByIntStream(array));
-
-        /*Поиск по условию*/
-        System.out.println(UtilArray.containElement(array, 54));
-
 
     }
 }

@@ -39,24 +39,37 @@ public class UtilArrayTest {
         };
     }
 
+    @DataProvider
+    public Object[][] setUpReplacementElementsLessThan() {
+        return new Object[][]{
+                new Object[]{new int[]{3, 13, 125}, 25, new int[]{25, 25, 125}},
+                new Object[]{new int[]{12, 32, 4}, 12, new int[]{12, 32, 12}}
+        };
+    }
+
     @Test(dataProvider = "setUpAvg")
-    public void averageTest(int[] given, double expected) {
-        Assert.assertEquals(UtilArray.elementsAverage(given), expected);
+    public void averageTest(int[] givenArray, double expectedAvg) {
+        Assert.assertEquals(UtilArray.elementsAverage(givenArray), expectedAvg);
     }
 
     @Test(dataProvider = "setUpSum")
-    public void sumTest(int[] given, int expected) {
-        Assert.assertEquals(UtilArray.elementsSum(given), expected);
+    public void sumTest(int[] givenArray, int expectedSum) {
+        Assert.assertEquals(UtilArray.elementsSum(givenArray), expectedSum);
     }
 
     @Test(dataProvider = "setUpMax")
-    public void maxTest(int[] given, int expected) {
-        Assert.assertEquals(UtilArray.maxElement(given), expected);
+    public void maxTest(int[] givenArray, int expectedMax) {
+        Assert.assertEquals(UtilArray.maxElement(givenArray), expectedMax);
     }
 
     @Test(dataProvider = "setUpMin")
-    public void minTest(int[] given, int expected) {
-        Assert.assertEquals(UtilArray.minElement(given), expected);
+    public void minTest(int[] givenArray, int expectedMin) {
+        Assert.assertEquals(UtilArray.minElement(givenArray), expectedMin);
+    }
+
+    @Test(dataProvider = "setUpReplacementElementsLessThan")
+    public void replacementElementsLessThanTest(int[] givenArray, int givenElement, int[] expectedArray) {
+        Assert.assertEquals(UtilArray.replacementElementsLessThan(givenElement, givenArray), expectedArray);
     }
 
 }

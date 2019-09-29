@@ -16,8 +16,8 @@ public class ConverterToArrayTest {
     }
 
     @Test(dataProvider = "setUp")
-    public void getListOfArraysTest(String given, double[] expected) {
-        Assert.assertEquals(ConverterToArray.getDoubleArray(given), expected);
+    public void getListOfArraysTest(String givenString, double[] expectedArray) {
+        Assert.assertEquals(ConverterToArray.getDoubleArray(givenString), expectedArray);
     }
 
 }

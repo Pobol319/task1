@@ -6,7 +6,7 @@ import by.course.task1.util.UtilArray;
 
 import java.util.Arrays;
 
-public class RunnerArray {
+public class ArrayRunner {
 
     public static void main(String[] args) {
 

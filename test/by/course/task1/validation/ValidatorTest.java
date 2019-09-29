@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class ValidatorTest {
 
     @DataProvider
-    public Object[][] dStrings() {
+    public Object[][] setUpStrings() {
         return new Object[][]{
                 new Object[]{"5 16.69 999.99", true},
                 new Object[]{"18.54 0 0.9", true},
@@ -16,7 +16,7 @@ public class ValidatorTest {
         };
     }
 
-    @Test(dataProvider = "dStrings")
+    @Test(dataProvider = "setUpStrings")
     public void isValidTest(String givenArray, boolean expectedBoolean) {
         Assert.assertEquals(Validator.isValid(givenArray), expectedBoolean);
     }

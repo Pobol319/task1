@@ -9,7 +9,7 @@ import by.course.task1.util.UtilArray;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class RunnerIntStream {
+public class IntStreamRunner {
     public static void main(String[] args) {
 
         int size = 10;

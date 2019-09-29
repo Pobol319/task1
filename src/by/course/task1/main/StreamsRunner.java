@@ -8,16 +8,15 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class RunnerStreams {
+public class StreamsRunner {
 
     public static void main(String[] args) {
 
         File file = new File("resources\\numbers.txt");
 
         FileParser fileParser = new FileParser();
-        fileParser.getTextFromFile(file);
 
-        ArrayList<double[]> arrayList = fileParser.getListOfArrays();
+        ArrayList<double[]> arrayList = fileParser.getListOfArrays(file);
 
         for (double[] array : arrayList) {
             System.out.println("Array: " + Arrays.toString(array));

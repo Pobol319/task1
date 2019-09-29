@@ -9,9 +9,11 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class FileParser {
-    protected ArrayList<String> textFromFile = new ArrayList<>();
 
-    public void getTextFromFile(File file) {
+    private ArrayList<String> getTextFromFile(File file) {
+
+        ArrayList<String> textFromFile = new ArrayList<>();
+
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String temp;
             while ((temp = bufferedReader.readLine()) != null) {
@@ -22,13 +24,15 @@ public class FileParser {
             System.err.println("File not found");
         } catch (IOException e2) {
             System.err.println("Error while reading from file");
-        } catch (StreamsException e3){
+        } catch (StreamsException e3) {
             System.err.println(e3.getMessage());
             System.err.println(e3.getText());
         }
+        return textFromFile;
     }
 
-    public ArrayList<double[]> getListOfArrays() {
+    public ArrayList<double[]> getListOfArrays(File file) {
+        ArrayList<String> textFromFile = getTextFromFile(file);
 
         ArrayList<double[]> listOfArrays = new ArrayList<>();
 

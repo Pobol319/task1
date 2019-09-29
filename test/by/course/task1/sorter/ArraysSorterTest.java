@@ -35,39 +35,39 @@ public class ArraysSorterTest {
     }
 
     @Test(dataProvider = "setUpDouble")
-    public void bubbleSortTest(double[] given, double[] expected) {
-        ArraysSorter.bubbleSort(given);
-        Assert.assertEquals(given, expected);
+    public void bubbleSortTest(double[] givenArray, double[] expectedArray) {
+        ArraysSorter.bubbleSort(givenArray);
+        Assert.assertEquals(givenArray, expectedArray);
     }
 
     @Test(dataProvider = "setUpDouble")
-    public void insertionSortTest(double[] given, double[] expected) {
-        ArraysSorter.insertionSort(given);
-        Assert.assertEquals(given, expected);
+    public void insertionSortTest(double[] givenArray, double[] expectedArray) {
+        ArraysSorter.insertionSort(givenArray);
+        Assert.assertEquals(givenArray, expectedArray);
     }
 
     @Test(dataProvider = "setUpDouble")
-    public void selectionSortTest(double[] given, double[] expected) {
-        ArraysSorter.insertionSort(given);
-        Assert.assertEquals(given, expected);
+    public void selectionSortTest(double[] givenArray, double[] expectedArray) {
+        ArraysSorter.insertionSort(givenArray);
+        Assert.assertEquals(givenArray, expectedArray);
     }
 
     @Test(dataProvider = "setUpInt")
-    public void bubbleSortTest(int[] given, int[] expected) {
-        ArraysSorter.bubbleSort(given);
-        Assert.assertEquals(given, expected);
+    public void bubbleSortTest(int[] givenArray, int[] expectedArray) {
+        ArraysSorter.bubbleSort(givenArray);
+        Assert.assertEquals(givenArray, expectedArray);
     }
 
     @Test(dataProvider = "setUpInt")
-    public void insertionSortTest(int[] given, int[] expected) {
-        ArraysSorter.insertionSort(given);
-        Assert.assertEquals(given, expected);
+    public void insertionSortTest(int[] givenArray, int[] expectedArray) {
+        ArraysSorter.insertionSort(givenArray);
+        Assert.assertEquals(givenArray, expectedArray);
     }
 
     @Test(dataProvider = "setUpInt")
-    public void selectionSortTest(int[] given, int[] expected) {
-        ArraysSorter.insertionSort(given);
-        Assert.assertEquals(given ,expected);
+    public void selectionSortTest(int[] givenArray, int[] expectedArray) {
+        ArraysSorter.insertionSort(givenArray);
+        Assert.assertEquals(givenArray ,expectedArray);
     }
 
 }

@@ -10,11 +10,11 @@ public class ArraysCreator {
     public static int[] createRandomArray(int size) {
 
         Random random = new Random();
-        int[] arr = new int[size];
+        int[] array = new int[size];
         for (int i = 0; i < size; i++) {
-            arr[i] = random.nextInt(BOUND);
+            array[i] = random.nextInt(BOUND);
         }
-        return arr;
+        return array;
     }
 
     public static IntStream createRandomIntStream(int size) {

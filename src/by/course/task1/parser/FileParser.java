@@ -8,9 +8,8 @@ import by.course.task1.validation.Validator;
 import java.io.*;
 import java.util.ArrayList;
 
-
 public class FileParser {
-    private ArrayList<String> textFromFile = new ArrayList<>();
+    protected ArrayList<String> textFromFile = new ArrayList<>();
 
     public void getTextFromFile(File file) {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
@@ -28,7 +27,6 @@ public class FileParser {
             System.err.println(e3.getText());
         }
     }
-
 
     public ArrayList<double[]> getListOfArrays() {
 

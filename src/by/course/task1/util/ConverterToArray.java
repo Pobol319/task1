@@ -20,5 +20,4 @@ public class ConverterToArray {
         return intStream.toArray();
     }
 
-
 }

@@ -2,7 +2,7 @@ package by.course.task1.util;
 
 import java.util.stream.IntStream;
 
-public class UtilArray {
+public class ArrayUtil {
 
     public static double elementsAverage(int[] array) {
         int size = array.length;

@@ -67,7 +67,7 @@ public class ArraysSorterTest {
     @Test(dataProvider = "setUpInt")
     public void selectionSortTest(int[] givenArray, int[] expectedArray) {
         ArraysSorter.insertionSort(givenArray);
-        Assert.assertEquals(givenArray ,expectedArray);
+        Assert.assertEquals(givenArray, expectedArray);
     }
 
 }

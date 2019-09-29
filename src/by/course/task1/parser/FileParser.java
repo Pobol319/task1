@@ -10,16 +10,31 @@ import java.util.ArrayList;
 
 public class FileParser {
 
-    private ArrayList<String> getTextFromFile(File file) {
+    public ArrayList<double[]> getListOfArrays(File file) {
+        final ArrayList<String> textFromFile = getTextLinesFromFile(file);
 
-        ArrayList<String> textFromFile = new ArrayList<>();
+        final ArrayList<double[]> listOfArrays = new ArrayList<>();
 
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+        for (final String textLine : textFromFile) {
+            if (Validator.isValid(textLine)) {
+                listOfArrays.add(ConverterToArray.getDoubleArray(textLine));
+            }
+        }
+        return listOfArrays;
+    }
+
+    private ArrayList<String> getTextLinesFromFile(File file) {
+
+        final ArrayList<String> textLinesFromFile = new ArrayList<>();
+
+        try (final BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String temp;
             while ((temp = bufferedReader.readLine()) != null) {
-                textFromFile.add(temp);
+                textLinesFromFile.add(temp);
             }
-            if (textFromFile.isEmpty()) throw new StreamsException("File is empty", file.getName());
+            if (textLinesFromFile.isEmpty()) {//do we really need to throw an exception in case file is empty? is it an exceptional case?
+                throw new StreamsException("File is empty", file.getName());
+            }
         } catch (FileNotFoundException e1) {
             System.err.println("File not found");
         } catch (IOException e2) {
@@ -28,20 +43,7 @@ public class FileParser {
             System.err.println(e3.getMessage());
             System.err.println(e3.getText());
         }
-        return textFromFile;
-    }
-
-    public ArrayList<double[]> getListOfArrays(File file) {
-        ArrayList<String> textFromFile = getTextFromFile(file);
-
-        ArrayList<double[]> listOfArrays = new ArrayList<>();
-
-        for (String temp : textFromFile) {
-            if (Validator.isValid(temp)) {
-                listOfArrays.add(ConverterToArray.getDoubleArray(temp));
-            }
-        }
-        return listOfArrays;
+        return textLinesFromFile;
     }
 
 }

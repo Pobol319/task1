@@ -1,12 +1,9 @@
 package by.course.task1.util;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 
 public class UtilArrayTest {
 

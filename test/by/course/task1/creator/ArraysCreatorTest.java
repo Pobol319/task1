@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class ArraysCreatorTest {
 
-    @Test()
+    @Test
     public void createRandomArrayTest() {
         int size = 5;
         Assert.assertEquals(ArraysCreator.createRandomArray(size).length, size);

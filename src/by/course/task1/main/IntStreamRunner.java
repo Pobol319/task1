@@ -3,7 +3,7 @@ package by.course.task1.main;
 import by.course.task1.constant.ArrayConstantsPool;
 import by.course.task1.creator.ArraysCreator;
 import by.course.task1.sorter.ArraysSorter;
-import by.course.task1.util.ConverterToArray;
+import by.course.task1.converter.ConverterToArray;
 import by.course.task1.util.ArrayUtil;
 
 

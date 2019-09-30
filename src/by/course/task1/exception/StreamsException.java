@@ -13,4 +13,19 @@ public class StreamsException extends Exception {
         this.text = fileName;
     }
 
+    public StreamsException() {
+        super();
+    }
+
+    public StreamsException(String message) {
+        super(message);
+    }
+
+    public StreamsException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public StreamsException(Throwable cause) {
+        super(cause);
+    }
 }

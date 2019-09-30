@@ -1,4 +1,4 @@
-package by.course.task1.validation;
+package by.course.task1.validator;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
